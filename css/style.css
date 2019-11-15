@@ -1,16 +1,12 @@
 *{
     list-style: 0;
     outline: 0;
-    font-family: 'Noto Sans TC', sans-serif!important;
+    /* font-family: 'Noto Sans TC', sans-serif; */
 }
 
-img{
-	max-width: 100%;
-	height: auto;
-}
 
 .header{
-    background-color: #57997a;
+    background-color: #FFF;
 }
 
 .logo{
@@ -36,18 +32,68 @@ img{
 
 }
 
+.share a{
+    position: relative;
+    color: #222;
+}
+
+.share a:hover{
+    text-decoration: none;
+}
+
+
+.share_fb:hover{
+    color: #04c;
+}
+
+.share_fb i{
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.share_fb::before{
+    font-family:'FontAwesome'; 
+    content: "\f082";
+    font-size: 24px;
+    position: absolute;
+    left: -30px;
+    top: -8px;
+}
+
+.share_line:hover{
+    color: #0a4;
+}
+
+.share_line i{
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.share_line::before{
+    font-family:'FontAwesome'; 
+    content: "\f3c0";
+    font-size: 24px;
+    position: absolute;
+    left: -30px;
+    top: -8px;
+}
+
 ul{
     margin-bottom: 0!important;
 }
 
 .share ul li{
     display: inline-block;
+    margin-left:50px;
 }
 
 .navbar{
-    background-color: #296649;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: rgba(0, 0, 0, .5);
     box-sizing: border-box;
     padding: 0 1em!important;
+    position: absolute!important;
+    z-index: 5;
+    width: 100%;
 }
 
 .navbar ul li{
@@ -62,10 +108,48 @@ ul{
     display: inline-block;
     color: #fff;
     text-decoration: #fff;
-
 }
 
 .navbar ul li a:hover{
     background-color: #ddd;
     color: black;
+}
+
+.benner{
+   position: relative;
+   margin-bottom: 100px;
+   /* height: 500px; */
+}
+
+.benner .carousel-inner img{
+    max-height: 680px;
+    box-sizing: border-box;
+}
+
+
+.carousel-control-next, .carousel-control-prev{
+    width: 5%!important;
+    /* background-color: transparent!important; */
+}
+.carousel-control-next:hover, .carousel-control-prev:hover{
+    background: rgba(66, 66, 66, .5)!important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 30px!important;
+    height: 30px!important;
+}
+
+.benner ol{
+    position: absolute;
+    bottom: -50px;
+}
+
+.benner ol li{
+    opacity: 1!important;
+    background-color: #aaa!important;
+}
+
+.benner ol .active{
+    background-color: #222!important;
 }

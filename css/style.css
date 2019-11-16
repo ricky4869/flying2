@@ -4,16 +4,15 @@
     font-family: 'Noto Sans TC', sans-serif!important;
 }
 
-img{
-	max-width: 100%;
-	height: auto;
-}
 
 .header{
-    background-color: #57997a;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .5);
 }
 
-.logo{
+.logo .row{
     justify-content: space-between;
     height: 60px;
 }
@@ -36,36 +35,215 @@ img{
 
 }
 
+.share a{
+    position: relative;
+    color: #222;
+}
+
+.share a:hover{
+    text-decoration: none;
+}
+
+
+.share_fb:hover{
+    color: #04c;
+}
+
+.share_fb i{
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.share_fb::before{
+    font-family:'FontAwesome'; 
+    content: "\f082";
+    font-size: 24px;
+    position: absolute;
+    left: -30px;
+    top: -8px;
+}
+
+.share_line:hover{
+    color: #0a4;
+}
+
+.share_line i{
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.share_line::before{
+    font-family:'FontAwesome'; 
+    content: "\f3c0";
+    font-size: 24px;
+    position: absolute;
+    left: -30px;
+    top: -8px;
+}
+
 ul{
     margin-bottom: 0!important;
 }
 
 .share ul li{
     display: inline-block;
+    margin-left:50px;
 }
 
 .navbar{
-    background-color: #296649;
+    font-family: 'Noto Sans TC', sans-serif!important;
     box-sizing: border-box;
     padding: 0 1em!important;
+    z-index: 5;
+    width: 100%;
 }
 
 .navbar ul li{
     display: inline-block;
-    /* padding: 8px 16px; */
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 
 .navbar ul li a{
     padding: 8px 16px;
     display: inline-block;
-    color: #fff;
-    text-decoration: #fff;
-
+    color: #000000;
+    text-decoration: none; 
 }
 
 .navbar ul li a:hover{
-    background-color: #ddd;
+    background-color: #fff;
     color: black;
+}
+
+.benner{
+   position: relative;
+   margin-bottom: 50px;
+   /* height: 500px; */
+}
+
+.benner .carousel-inner img{
+    max-height: 680px;
+    box-sizing: border-box;
+}
+
+
+.carousel-control-next, .carousel-control-prev{
+    width: 5%!important;
+    /* background-color: transparent!important; */
+}
+.carousel-control-next:hover, .carousel-control-prev:hover{
+    background: rgba(66, 66, 66, .5)!important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 30px!important;
+    height: 30px!important;
+}
+.benner ol li{
+    opacity: 1!important;
+    background-color: #fff!important;
+}
+
+.benner ol .active{
+    background-color: #222!important;
+}
+
+.search{
+    background: #999;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+.search > *{
+    color: #555;
+    border-radius: 5px;
+    padding: 8px 0;
+}
+
+.search > input[type='button']{
+    color: #fff;
+    border: none;
+    background: #266;
+    cursor: pointer;
+}
+
+.search > input[type='button']:hover{
+    background: #288;
+}
+
+
+.section{
+    padding: 50px 0;
+}
+
+.section h2{
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+
+/* best_tour */
+
+.best_tour{
+    padding: 0 50px;
+}
+.best_tour .item{
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.best_tour .item a{
+    text-decoration: none;
+}
+.best_tour .item .img {
+     height: 200px;
+     background-size: cover;
+     background-position: center center;
+}
+
+.best_tour .item .txt{
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    padding: 10px;
+}
+
+.best_tour .item .txt h3{
+    font-size: 20px;
+    color: #333;
+}
+
+.best_tour .item .txt p{
+    font-size: 14px;
+    color:#999;
+}
+
+/* hot_tour */
+.hot_tour .item{
+    width: 350px;
+}
+
+.hot_tour .item .img {
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hot_tour .item .txt{
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    padding: 20px;
+    position: relative;
+}
+.hot_tour .item .txt::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -40px;
+    border-top: transparent 40px solid;
+    border-left: 175px #fff solid;
+    border-right: 175px #fff solid;
+    box-sizing: border-box;
 }

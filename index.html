@@ -19,42 +19,44 @@
 
 <body>
 
-    <div class="wrap">
+    <div class="wrap" id="wrap">
         <div class="header">
-            <div class="logo">
+            <!-- <div class="logo"> -->
                 <div class="container">
                     <div class="logo row">
-                        <div class="logo_img col-34 col-lg-4">
+                        <div class="logo_img col-6 col-md-4">
                             <a href="#"><img src="img/logo.png" alt=""></a>
                         </div>
-                        <div class="share col-6 col-lg-4">
+                        <div class="member col-10 col-md-8">
                             <ul>
-                                <li><a href="#" class="share_fb"><i>Facebook</i></a></li>
-                                <li><a href="#" class="share_line"><i>LINE</i></a></li>
+                                <li><a href="#" class="member_sign"><span>登入/註冊</span></a></li>
+                                <li><a href="#" class="member_cart"><span>購物車</span></a></li>
                             </ul>
                         </div>
+                        <div class="navbar_btn col-2 d-md-none">
+                            <div class="nav_btn" data-toggle="collapse" data-target="#rwd_navbar"><a href="#"></a></div>
+                        </div>
+                        <div class="navbar col-lg-12 collapse d-md-inline-block" id="rwd_navbar" data-parent=".header">
+                            <div class="container">
+                                <ul>
+                                    <li><a href="#">日本</a></li>
+                                    <li><a href="#">大陸</a></li>
+                                    <li><a href="#">韓國</a></li>
+                                    <li><a href="#">東南亞</a></li>
+                                    <li><a href="#">歐洲</a></li>
+                                    <li><a href="#">美國</a></li>
+                                    <li><a href="#">中東</a></li>
+                                    <li><a href="#">郵輪</a></li>
+                                    <li><a href="#">台灣本島</a></li>
+                                    <li><a href="#">金門</a></li>
+                                    <li><a href="#">澎湖</a></li>
+                                </ul>
+                            </div>
+            
+                        </div>
+
                     </div>
                 </div>
-            </div>
-
-            <div class="navbar">
-                <div class="container">
-                    <ul>
-                        <li><a href="#">日本</a></li>
-                        <li><a href="#">大陸</a></li>
-                        <li><a href="#">韓國</a></li>
-                        <li><a href="#">東南亞</a></li>
-                        <li><a href="#">歐洲</a></li>
-                        <li><a href="#">美國</a></li>
-                        <li><a href="#">中東</a></li>
-                        <li><a href="#">郵輪</a></li>
-                        <li><a href="#">台灣本島</a></li>
-                        <li><a href="#">金門</a></li>
-                        <li><a href="#">澎湖</a></li>
-                    </ul>
-                </div>
-
-            </div>
 
         </div>
 
@@ -373,6 +375,51 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="footer">
+                <div class="f_top">
+                    <div class="row">
+                        <div class="footer-item col-12 col-md-6">
+                            <p>飛揚旅行社有限公司台南分公司</p>
+                            <p>交觀綜字2068號|品保協會高字號0005號</p>
+
+                        </div>
+                        <div class="footer-item col-12 col-md-6">
+                            <p>台南市南區文南路51號2樓</p>
+                            <p>電話：(06)265-3536</p>
+                            <p>傳真：(06)265-4589</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f_bottom">
+                    <p>Copyright © 2019 飛揚旅行社 All Rights Reserved.</p>
+                </div>
+
+            </div>
+
+
+            <div class="tools_bar">
+                <div class="tools_item tools_fb">
+                    <a href="https://www.facebook.com/%E5%8F%B0%E5%8D%97%E9%A3%9B%E6%8F%9A%E4%B9%8B%E6%97%85-1403287959889654/?epa=SEARCH_BOX"
+                        target="_blank">
+                        <div class="img" style="background-image: url('img/facebook-b.png');"></div>
+                    </a>
+                </div>
+                <div class="tools_item tools_line">
+                    <a href="https://line.me/R/ti/p/%40hou2310s" target="_blank">
+                        <div class="img" style="background-image: url('img/line-b.png');"></div>
+                    </a>
+
+                </div>
+                <div class="tools_item gotop">
+                    <a href="#wrap">
+                        <div class="img" style="background-image: url('img/up.png');"></div>
+                    </a>
+
+                </div>
+            </div>
         </div>
 
 
@@ -385,6 +432,9 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
 
     <script>
         $(document).ready(function () {

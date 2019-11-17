@@ -5,13 +5,18 @@
     outline: 0;
     font-family: 'Noto Sans TC', sans-serif;
 }
-.flyin-bottom{
-    transform: translateY(70%);
-    opacity: 0;
+
+@media(min-width:992px) {
+        .flyin-bottom{
+        transform: translateY(70%);
+        opacity: 0;
+    }
+        .flyBtm{
+        animation: flyBtm 1.5s forwards ease-out;
+    }
 }
-.flyBtm{
-    animation: flyBtm 1.5s forwards ease-out;
-}
+
+
 
 @keyframes flyBtm{
     0%{
@@ -47,9 +52,8 @@
     }
 }
 
-.logo .row{
+.logo{
     justify-content: space-between;
-    height: 60px;
 }
 
 .logo_img{
@@ -62,70 +66,49 @@
     max-width: 200px;
 }
 
-.share{
+.member{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
+.member a{
+    position: relative;
+    color: #222;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.share a{
-    position: relative;
-    color: #222;
-}
-
-.share a:hover{
+.member a:hover{
     text-decoration: none;
+    color: #288;
 }
-
-
-.share_fb:hover{
-    color: #04c;
-}
-
-.share_fb i{
-    font-size: 16px;
-    font-family: 'Noto Sans TC', sans-serif;
-}
-
-.share_fb::before{
+.member_sign::before{
     font-family:'FontAwesome'; 
-    content: "\f082";
-    font-size: 24px;
+    content: "\f2bd";
+    font-size: 20px;
     position: absolute;
     left: -30px;
-    top: -8px;
 }
-
-.share_line:hover{
-    color: #0a4;
-}
-
-.share_line i{
-    font-size: 16px;
-    font-family: 'Noto Sans TC', sans-serif;
-}
-.share_line::before{
+.member_cart::before{
     font-family:'FontAwesome'; 
-    content: "\f3c0";
-    font-size: 24px;
+    content: "\f07a";
+    font-size: 20px;
     position: absolute;
     left: -30px;
-    top: -8px;
 }
 
 ul{
     margin-bottom: 0!important;
 }
 
-.share ul li{
+.member ul li{
     display: inline-block;
     margin-left:50px;
 }
 
 .navbar{
-    font-family: 'Noto Sans TC', sans-serif!important;
     box-sizing: border-box;
     padding: 0 1em!important;
     z-index: 5;
@@ -150,6 +133,19 @@ ul{
     background-color: #333;
     color: #fff;
 }
+.nav_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.nav_btn::before{
+    font-family:'FontAwesome'; 
+    content: "\f0c9";
+    font-size: 20px;
+
+}
+
 
 .benner{
    margin-bottom: 50px;
@@ -202,20 +198,6 @@ ul{
     color: #fff;
 }
 
-/* .benner .owl-dots{
-   position: absolute;
-   width: 100%;
-}
-.benner .owl-dots button {
-    font-size: 56px;
-}
-.benner .owl-dots button span{
-    font-size: 56px;
-    display: block;
-    height: 60px;
-    width: 60px;
-} */
-
 
 .search{
     background: #ccc;
@@ -223,7 +205,6 @@ ul{
     box-sizing: border-box;
     justify-content: space-between;
     border-radius: 5px;
-    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .search > *{
@@ -252,7 +233,6 @@ ul{
 
 .section{
     padding: 50px 0;
-    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .section > h2{
@@ -346,9 +326,7 @@ ul{
 
 .best_tour .item .txt{
     box-sizing: border-box;
-    /* border: 1px solid #999; */
     padding: 10px;
-    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .best_tour .item .txt h3{
@@ -402,7 +380,6 @@ ul{
     box-sizing: border-box;
     padding: 20px;
     position: relative;
-    font-family: 'Noto Sans TC', sans-serif;
 }
 .hot_tour .item .txt::before{
     content: '';
@@ -479,4 +456,73 @@ ul{
     font-size: 14px;
     color: #999;
 }
+
+.footer p { 
+    margin-bottom: 5px;
+}
+
+
+.f_top{
+    padding: 20px;
+    background: #666;
+    color: #fff;
+    font-weight: 300;
+}
+
+.f_bottom{
+    padding: 10px 20px;
+    background: #333;
+    color: #ddd;
+    text-align: center;
+}
+
+.tools_bar{
+    z-index: 999;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    box-sizing: border-box;
+}
+
+.tools_item{
+    margin-top: .5em;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(120%);
+    animation-name: toolsFly;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.tools_item .img{
+    width: 42px;
+    height: 42px;
+    background-size: cover;
+    background-position: center center;
+    transition: .3s all;
+}
+
+.tools_item :hover.img{
+    transform: scale(1.1);
+}
+
+.tools_item:nth-child(2){
+    animation-delay: .3s;
+}
+
+.tools_item:nth-child(3){
+    animation-delay: .6s;
+}
+
+
+@keyframes toolsFly{
+    0%{transform: translateX(120%);}
+    100%{transform: translateX(0%);}
+}
+
 

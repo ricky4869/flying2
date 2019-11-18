@@ -70,6 +70,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .member a{
@@ -103,25 +105,47 @@ ul{
     margin-bottom: 0!important;
 }
 
-.member ul li{
+.member > ul > li{
     display: inline-block;
     margin-left:50px;
 }
 
+@media(max-width:768px) {
+    /* .navbar{
+        background: #555;
+    } */
+    .navbar > ul > li{
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+    }
+
+    .navbar > ul > li > a{
+        width: 100%;
+        /* padding: 8px 16px; */
+        display: inline-block;
+        color: #000000;
+    }
+}
+
 .navbar{
+    padding: 0!important;
     box-sizing: border-box;
-    padding: 0 1em!important;
     z-index: 5;
     width: 100%;
 }
 
-.navbar ul li{
+.navbar > ul{
+    margin: 0!important;
+}
+
+.navbar > ul > li{
     display: inline-block;
     box-sizing: border-box; 
 }
 
 
-.navbar ul li a{
+.navbar > ul > li > a{
     padding: 8px 16px;
     display: inline-block;
     color: #000000;
@@ -129,15 +153,22 @@ ul{
     transition: .2s all ease-in;
 }
 
-.navbar ul li a:hover{
+.navbar > ul > li > a:hover{
     background-color: #333;
     color: #fff;
+}
+.navbar_btn{
+    padding-bottom: 10px;
 }
 .nav_btn{
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.nav_btn:hover{
+    color: #288;
 }
 .nav_btn::before{
     font-family:'FontAwesome'; 
@@ -159,42 +190,42 @@ ul{
     /* width: 500px; */
     height: 100%;
 }
-.benner .img{
+.benner .item > a > .img{
     background-position: center center;
     background-size: cover;
     width: 100%;
     height: 500px;
 }
 
-.benner .owl-carousel{
+.benner > .owl-carousel{
     height: 500px;
 }
 
 
-.benner .owl-nav .owl-prev{
+.benner .owl-nav > .owl-prev{
     position: absolute;
     top: 230px;
     left: 0;
 }
 
-.benner .owl-nav .owl-next{
+.benner .owl-nav > .owl-next{
     position: absolute;
     top: 230px;
     right: 0;
 }
-.benner .owl-nav button{
+.benner .owl-nav > button{
     outline: none;
     align-self: center;
     box-sizing: border-box;
 }
-.benner .owl-nav button span{
+.benner .owl-nav > button > span{
     padding: 10px 6px;
     display: block;
     font-size: 40px;
     color: rgba(255, 255, 255,.5);
 }
 
-.benner .owl-nav button span:hover{
+.benner .owl-nav > button > span:hover{
     color: #fff;
 }
 
@@ -260,30 +291,30 @@ ul{
     background: #eee;
 }
 
-.section .owl-nav .owl-prev{
+.section .owl-nav > .owl-prev{
     position: absolute;
     top: 50%;
     left: 0;
 }
 
-.section .owl-nav .owl-next{
+.section .owl-nav > .owl-next{
     position: absolute;
     top: 50%;
     right: 0;
 }
-.section .owl-nav button{
+.section .owl-nav > button{
     outline: none;
     align-self: center;
     box-sizing: border-box;
 }
-.section .owl-nav button span{
+.section .owl-nav > button > span{
     padding: 10px 6px;
     display: block;
     font-size: 30px;
     color: rgba(51, 51, 51, .5);
 }
 
-.section .owl-nav button span:hover{
+.section .owl-nav > button > span:hover{
     color: #333;
 }
 
@@ -295,16 +326,16 @@ ul{
 }
 
 
-.best_tour .item{
+.best_tour > .item{
     box-sizing: border-box;
     margin-bottom: 2em;
     /* overflow: hidden; */
 }
 
-.best_tour .item:hover .img{
+.best_tour > .item:hover .img{
     transform: scale(1.1);
 }
-.best_tour .item a{
+.best_tour > .item > a{
     text-decoration: none;
     display: block;
     width: 100%;
@@ -313,10 +344,10 @@ ul{
 
 }
 
-.best_tour .item .imgBox{
+.imgBox{
     overflow: hidden;
 }
-.best_tour .item .img {
+.imgBox .img{
      height: 200px;
      background-size: cover;
      background-position: center center;
@@ -324,17 +355,17 @@ ul{
      transition: all .3s;
 }
 
-.best_tour .item .txt{
+.best_tour > .item > a > .txt{
     box-sizing: border-box;
     padding: 10px;
 }
 
-.best_tour .item .txt h3{
+.best_tour > .item > a > .txt > h3{
     font-size: 20px;
     color: #333;
 }
 
-.best_tour .item .txt p{
+.best_tour > .item > a > .txt > p{
     font-size: 14px;
     color:#999;
     margin-bottom: 0;
@@ -366,22 +397,22 @@ ul{
     /* padding: 1em 0; */
 }
 
-.hot_tour .item a{
+.hot_tour .item > a{
     text-decoration: none;
 }
 
-.hot_tour .item .img {
+.hot_tour .item > a >.img {
     height: 400px;
     background-size: cover;
     background-position: center center;
 }
 
-.hot_tour .item .txt{
+.hot_tour .item > a > .txt{
     box-sizing: border-box;
     padding: 20px;
     position: relative;
 }
-.hot_tour .item .txt::before{
+.hot_tour .item > a > .txt::before{
     content: '';
     position: absolute;
     left: 0;
@@ -391,10 +422,10 @@ ul{
     border-right: 150px #fff solid;
     box-sizing: border-box;
 }
-.hot_tour .item .txt p{
+.hot_tour .item > a > .txt > p{
     color: #333;
 }
-.hot_tour .item .txt h3{
+.hot_tour .item > a > .txt > h3{
     color: #333;
     font-size: 20px;
     margin-bottom: 1em;
@@ -403,11 +434,11 @@ ul{
 .hot_tour .item:hover{
     transform: translateY(-20px);
 }
-.hot_tour .item:hover .txt h3{
+.hot_tour .item:hover .txt > h3{
     color: #288;
 }
 
-.hot_tour .item .txt .date{
+.hot_tour .item > a > .txt > .date{
     font-size: 14px;
     margin-bottom: 1em!important;
 }
@@ -423,7 +454,7 @@ ul{
 .message .item {
     margin: 0 10px;
 }
-.message .item a{
+.message .item > a{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -431,23 +462,23 @@ ul{
 
 }
 
-.message .item .img{
+.message .item > a > .img{
     width: 70%;
     padding: 20px;
 }
 
-.message .item .txt{
+.message .item > a > .txt{
     text-align: center;
 }
 
-.message .item .txt h3 {
+.message .item > a > .txt > h3 {
     font-size: 20px;
     margin-bottom: 1em;
     color: #333;
     transition: .3s color;
 }
 
-.message .item:hover h3{
+.message .item > a:hover h3{
     color: #288;
 }
 
@@ -499,7 +530,7 @@ ul{
     animation-fill-mode: forwards;
 }
 
-.tools_item .img{
+.tools_item > a > .img{
     width: 42px;
     height: 42px;
     background-size: cover;
@@ -507,7 +538,7 @@ ul{
     transition: .3s all;
 }
 
-.tools_item :hover.img{
+.tools_item:hover.img{
     transform: scale(1.1);
 }
 

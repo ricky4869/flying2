@@ -488,9 +488,6 @@ ul{
     color: #999;
 }
 
-.footer p { 
-    margin-bottom: 5px;
-}
 
 
 .f_top{
@@ -500,11 +497,19 @@ ul{
     font-weight: 300;
 }
 
+.footer-item > p{
+    margin-bottom: 5px;
+}
+
 .f_bottom{
     padding: 10px 20px;
     background: #333;
     color: #ddd;
     text-align: center;
+}
+
+.f_bottom > p{
+    margin-bottom: 0;
 }
 
 .tools_bar{

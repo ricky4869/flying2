@@ -394,25 +394,31 @@ ul{
     box-shadow: 0 0 5px #999;
     margin: 2em 10px 0 10px;
     transition: .3s all;
-    /* padding: 1em 0; */
+    position: relative;
 }
 
 .hot_tour .item > a{
+    z-index: 1;
     text-decoration: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
-.hot_tour .item > a >.img {
+.hot_tour .item >.img {
     height: 400px;
     background-size: cover;
     background-position: center center;
 }
 
-.hot_tour .item > a > .txt{
+.hot_tour .item > .txt{
     box-sizing: border-box;
     padding: 20px;
     position: relative;
 }
-.hot_tour .item > a > .txt::before{
+.hot_tour .item > .txt::before{
     content: '';
     position: absolute;
     left: 0;
@@ -422,10 +428,10 @@ ul{
     border-right: 150px #fff solid;
     box-sizing: border-box;
 }
-.hot_tour .item > a > .txt > p{
+.hot_tour .item > .txt > p{
     color: #333;
 }
-.hot_tour .item > a > .txt > h3{
+.hot_tour .item > .txt > h3{
     color: #333;
     font-size: 20px;
     margin-bottom: 1em;
@@ -438,12 +444,12 @@ ul{
     color: #288;
 }
 
-.hot_tour .item > a > .txt > .date{
+.hot_tour .item > .txt > .date{
     font-size: 14px;
     margin-bottom: 1em!important;
 }
 
-.hot_tour .item .txt .price{
+.hot_tour .item > .txt > .price{
     color: #c00;
     font-size: 18px;
     font-weight: 700;
@@ -453,36 +459,41 @@ ul{
 /* message */
 .message .item {
     margin: 0 10px;
-}
-.message .item > a{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
+}
+.message .item > a{
     text-decoration: none;
-
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.message .item > a > .img{
+.message .item > .img{
     width: 70%;
     padding: 20px;
 }
 
-.message .item > a > .txt{
+.message .item > .txt{
     text-align: center;
 }
 
-.message .item > a > .txt > h3 {
+.message .item > .txt > h3 {
     font-size: 20px;
     margin-bottom: 1em;
     color: #333;
     transition: .3s color;
 }
 
-.message .item > a:hover h3{
+.message .item:hover h3{
     color: #288;
 }
 
-.message .item .txt p{
+.message .item > .txt > p{
     margin-bottom: 0;
     font-size: 14px;
     color: #999;
@@ -533,6 +544,7 @@ ul{
     animation-name: toolsFly;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
 }
 
 .tools_item > a > .img{

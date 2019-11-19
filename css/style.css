@@ -39,6 +39,7 @@
     transition: .8s all;
     transform: translateY(-100px);
     background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 5px 10px rgba(88, 88, 88, .5);
 }
 
 @keyframes header{
@@ -111,9 +112,6 @@ ul{
 }
 
 @media(max-width:768px) {
-    /* .navbar{
-        background: #555;
-    } */
     .navbar > ul > li{
         width: 100%;
         text-align: center;
@@ -329,7 +327,6 @@ ul{
 .best_tour > .item{
     box-sizing: border-box;
     margin-bottom: 2em;
-    /* overflow: hidden; */
 }
 
 .best_tour > .item:hover .img{
@@ -347,7 +344,7 @@ ul{
 .imgBox{
     overflow: hidden;
 }
-.imgBox .img{
+.imgBox > .img{
      height: 200px;
      background-size: cover;
      background-position: center center;

@@ -112,17 +112,22 @@ ul{
 }
 
 @media(max-width:768px) {
-    .navbar > ul > li{
+    .nav_list{
         width: 100%;
         text-align: center;
         border-bottom: 1px solid rgba(0, 0, 0, .5);
     }
 
-    .navbar > ul > li > a{
+    .nav_list > a{
         width: 100%;
         /* padding: 8px 16px; */
         display: inline-block;
         color: #000000;
+    }
+
+    .languagee > ul{
+        width: 100%;
+        box-shadow: none;
     }
 }
 
@@ -131,29 +136,31 @@ ul{
     box-sizing: border-box;
     z-index: 5;
     width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .navbar > ul{
     margin: 0!important;
 }
 
-.navbar > ul > li{
+.nav_list{
     display: inline-block;
     box-sizing: border-box; 
 }
 
 
-.navbar > ul > li > a{
+.nav_list > a{
     padding: 8px 16px;
     display: inline-block;
     color: #000000;
-    text-decoration: none; 
-    transition: .2s all ease-in;
+    text-decoration: none;
 }
 
-.navbar > ul > li > a:hover{
+.nav_list > a:hover{
     background-color: #333;
     color: #fff;
+    text-decoration: none;
 }
 .navbar_btn{
     padding-bottom: 10px;
@@ -168,12 +175,50 @@ ul{
 .nav_btn:hover{
     color: #288;
 }
+
 .nav_btn::before{
     font-family:'FontAwesome'; 
     content: "\f0c9";
     font-size: 20px;
 
 }
+
+
+.languagee{
+    position: relative;
+}
+
+.languagee > a::after{
+    padding-left: 0.5em;
+    font-family:'FontAwesome'; 
+    content: "\f107";
+    font-size: 14px;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.languagee > ul{
+    position: absolute;
+    top: 40px;
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 0 5px 10px rgba(88, 88, 88, .5);
+}
+
+.languagee > ul > li {
+    width: 100%;
+}
+
+.languagee > ul > .nav_list.active > a{
+    background-color: #333;
+    color: #fff;
+}
+
+.languagee > ul > li > a{
+    width: 100%;
+}
+
+
+/* benner */
 
 
 .benner{
@@ -333,12 +378,14 @@ ul{
     transform: scale(1.1);
 }
 .best_tour > .item > a{
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    display: block;
     width: 100%;
     height: 100%;
     box-shadow: 0 0 5px #999;
-
+    box-sizing: border-box;
+    position: relative;
 }
 
 .imgBox{
@@ -357,16 +404,28 @@ ul{
     padding: 10px;
 }
 
-.best_tour > .item > a > .txt > h3{
+.best_tour > .item > a > .txt h3{
     font-size: 20px;
     color: #333;
 }
 
-.best_tour > .item > a > .txt > p{
+.best_tour > .item > a > .txt h4{
+    font-size: 24px;
+    color: #288;
+    text-align: right;
+}
+
+.best_tour > .item > a > .txt p{
     font-size: 14px;
     color:#999;
-    margin-bottom: 0;
+    margin-bottom: .5;
 }
+
+.best_tour > .item > a > .txtTop{
+    flex: 1;
+}
+
+
 
 /* hot_tour */
 .hot_tour{

@@ -410,9 +410,14 @@ ul{
 }
 
 .best_tour > .item > a > .txt h4{
-    font-size: 24px;
+    font-size: 20px;
     color: #288;
     text-align: right;
+}
+
+.best_tour > .item > a > .txt h5{
+    font-size: 18px;
+    color: #333;
 }
 
 .best_tour > .item > a > .txt p{

@@ -113,13 +113,13 @@ ul{
 }
 
 @media(max-width:768px) {
-    #header .logo > .navbar > ul > .nav_list{
+    #header .logo > .navbar .nav_list{
         width: 100%;
         text-align: center;
         border-bottom: 1px solid rgba(0, 0, 0, .5);
     }
 
-    #header .logo > .navbar > ul > .nav_list > a{
+    #header .logo > .navbar .nav_list > a{
         width: 100%;
         /* padding: 8px 16px; */
         display: inline-block;
@@ -194,6 +194,7 @@ ul{
 }
 
 #header .logo > .navbar > .languagee > ul > .nav_list > a{
+    display: inline-block;
     width: 100%;
 }
 

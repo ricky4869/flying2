@@ -488,11 +488,11 @@
         var day = ("0" + today.getDate()).slice(-2);
         document.querySelector('.date_1').value = `${year}-${month}-${day}`;
 
-        var today2 = new Date(today.getTime()+15768000000);
+        var today2 = new Date(today.getTime()+2628000000);
         var year2 = today2.getFullYear();
         var month2 = ("0" + (today2.getMonth()+1)).slice(-2);
         var day2 = ("0" + today2.getDate()).slice(-2);
-        document.querySelector('.date_2').value = `年-月-日`;
+        document.querySelector('.date_2').value = `${year2}-${month2}-${day2}`;
 
         $(document).ready(function () {
 

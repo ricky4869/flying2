@@ -105,8 +105,8 @@
                     <option value="金門">金門</option>
                     <option value="澎湖">澎湖</option>
                 </select>
-                <input type="date" value=" " class="col-md-3 col-5">
-                <input type="date" value="請選擇日期" class="col-md-3 col-5">
+                <input type="date" class="col-md-3 col-5 date_1">
+                <input type="date" class="col-md-3 col-5 date_2">
                 <input type="text" placeholder="關鍵字" class="col-md-2 col-12">
                 <input type="button" value="搜尋" class="col-md-1 col-12">
             </div>
@@ -477,6 +477,23 @@
     </script>
 
     <script>
+
+
+
+
+        var today = new Date();
+       
+        var year = today.getFullYear();
+        var month = ("0" + (today.getMonth()+1)).slice(-2);
+        var day = ("0" + today.getDate()).slice(-2);
+        document.querySelector('.date_1').value = `${year}-${month}-${day}`;
+
+        var today2 = new Date(today.getTime()+15768000000);
+        var year2 = today2.getFullYear();
+        var month2 = ("0" + (today2.getMonth()+1)).slice(-2);
+        var day2 = ("0" + today2.getDate()).slice(-2);
+        document.querySelector('.date_2').value = `${year2}-${month2}-${day2}`;
+
         $(document).ready(function () {
 
 
